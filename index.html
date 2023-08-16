@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus Slayer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/covid.png">
+</head>
+<body>
+    <dialog id="hs_dialog">
+        <table id="ht_table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Time</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="hs_username">-</td>
+                    <td id="hs_time">-</td>
+                    <td id="hs_score">-</td>
+                </tr>
+            </tbody>
+        </table>
+        <form method="dialog" class="mt-1">
+            <button class="btn btn-success w-100">Close</button>
+        </form>
+    </dialog>
+    <div class="flex">
+        <div class="left" id="left">
+            <div class="ui">
+                <div class="main-title">
+                    <img src="images/covid.png" alt="logo" width="100">
+                    <div class="title">Virus Slayer</div>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <div id="splash">
+                <div class="main-title">
+                    <img src="images/covid.png" alt="logo" width="100">
+                    <div class="title">Virus Slayer</div>
+                </div>
+                <div class="wrap">
+                    <div class="htp">
+                        <h3>How To Play:</h3>
+                        <div>
+                            <div>1. Input username and click play</div>
+                            <div>2. Destroy Virus with D, F, J, and K key</div>
+                            <div>3. Reach high score</div>
+                            <div>4. Enjoy the game</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success" id="show_highscore">Show Highscore</button>
+                </div>
+                <div class="input">
+                    <input type="text" class="form-input" id="input_username" placeholder="Input username">
+                    <button class="btn-play form-input" id="btn_play">Play!</button>
+                </div>
+            </div>
+            <canvas id="game"></canvas>
+            <div id="over_screen">
+                <div class="wrapper">
+                    <div class="title">GAME OVER</div>
+                    <div class="text-center" id="last_score">Your Score:</div>
+                    <div class="text-center" id="last_time">Time :</div>
+                    <button class="btn btn-success" id="resume">Restart</button>
+                    <button class="btn btn-success" id="quit">Exit</button>
+                </div>
+            </div>
+            <div id="pause_screen">
+                <div class="wrapper">
+                    <div class="title">PAUSE</div>
+                    <button class="btn btn-danger" id="quit">Exit</button>
+                    <button class="btn btn-success" id="resume">Resume</button>
+                </div>
+            </div>
+        </div>
+        <div class="right" id="right">
+            <div class="ui" id="username">Name:</div>
+            <div class="ui" id="score">Score: 0</div>
+            <div class="ui" id="timer">Time: 0</div>
+            <div class="ui" id="health">Health: 5</div>
+            <button id="pause">Pause</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
